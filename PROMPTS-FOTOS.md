@@ -44,3 +44,12 @@ Para mantener coherencia, en ChatGPT sube `assets/adcom-hero.png` como referenci
 - Pide 1 imagen por prompt y, si no te gusta el resultado, repite con "misma escena, otra variación".
 - Evita que salgan personas, letreros o marcas: son imágenes conceptuales, no obras reales de ADCOM.
 - Conserva la leyenda "imagen conceptual" en el sitio mientras no sean obras autorizadas.
+
+## Fotos extra para Especialidades (4)
+
+Mismo estilo base de arriba. Guarda con estos nombres:
+
+13. `adcom-casona-fachada.png` (16:9) — Restored colonial-era casona facade in Mérida's historic center: thick plaster walls in warm ochre, tall wooden doors and windows with iron grilles, stone cornice, pitched sidewalk, soft morning light. No people, no signs.
+14. `adcom-casona-patio.png` (4:5 vertical) — Interior courtyard of a restored casona: stone arcade, pasta (cement) tile floor, a mature tree, central fountain or planters, warm shadows, respectful restoration that keeps original character.
+15. `adcom-comercial-local.png` (16:9) — Elegant contemporary retail or café space with limestone counter, dark wood slats, warm pendant lights, large glass front opening to a tropical street, no brand names, no text.
+16. `adcom-comercial-interior.png` (4:3) — Interior of a boutique restaurant or showroom: curved plaster walls, wooden furniture, soft indirect lighting, tropical plants, minimal and warm. No text or logos.

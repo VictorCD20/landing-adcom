@@ -58,3 +58,25 @@
 .gallery-grid .project-photo{aspect-ratio:4/3}
 .g1{grid-column:span 7}.g2{grid-column:span 5}.g3{grid-column:span 5}.g4{grid-column:span 7}
 @media(max-width:700px){.gallery-grid{gap:14px}.g1,.g2,.g3,.g4{grid-column:1/-1}}
+
+/* Especialidades */
+.chips-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.process.four{grid-template-columns:repeat(4,1fr)}
+.process.four .step{padding-right:24px;margin-right:24px}
+.faq-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(40px,7vw,110px);align-items:start}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;font:300 clamp(20px,2vw,26px)/1.25 var(--serif);letter-spacing:-.01em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";flex:none;display:grid;place-items:center;width:38px;height:38px;border:1px solid var(--line);border-radius:50%;font:300 22px var(--sans);transition:transform .4s var(--ease),background .3s,color .3s}
+.faq details[open] summary:after{transform:rotate(45deg);background:var(--jungle);color:#fff;border-color:var(--jungle)}
+.faq details p{margin:0 0 24px;color:var(--muted);max-width:560px;animation:rise .5s var(--ease) both}
+.ph{color:var(--clay);font-size:13px}
+.banner{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;background:var(--jungle);color:var(--bone);border-radius:10px;padding:clamp(28px,4vw,52px);text-decoration:none;position:relative;overflow:hidden}
+.banner h3{font:300 clamp(28px,3.6vw,48px)/1.08 var(--serif);letter-spacing:-.025em;margin:12px 0 0;max-width:680px}
+.banner h3 em{font-style:italic;color:var(--gold)}
+.banner .eyebrow{color:var(--gold)}
+.banner .arrowbtn{display:grid;place-items:center;width:68px;height:68px;border:1px solid rgba(255,255,255,.4);border-radius:50%;font-size:24px;transition:transform .5s var(--ease),background .3s,color .3s}
+.banner:hover .arrowbtn{background:var(--gold);color:var(--ink);transform:rotate(45deg)}
+@media(max-width:1000px){.process.four{grid-template-columns:1fr 1fr}.process.four .step{margin-right:20px}.faq-wrap{grid-template-columns:1fr}}
+@media(max-width:700px){.process.four{grid-template-columns:1fr}.process.four .step{margin-right:0}.banner{grid-template-columns:1fr}.banner .arrowbtn{width:54px;height:54px}}
