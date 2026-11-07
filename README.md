@@ -1,10 +1,10 @@
 # ADCOM Mérida — propuesta visual
 
 ## Estado
-Propuesta HTML estática para revisar. No está publicada en Vercel, no está conectada al dominio de ADCOM y no contiene formularios ni integraciones activas.
+Propuesta HTML estática para revisar. No está publicada en Vercel, no está conectada al dominio de ADCOM y el formulario de contacto es de muestra (valida en el navegador, no envía datos).
 
 ## Qué incluye
-- Inicio, servicios, portafolio y una plantilla de detalle de proyecto.
+- Sitio multipágina: `index.html`, `servicios.html`, `proyectos.html`, `proyecto.html` (plantilla de detalle) y `contacto.html`.
 - Diseño adaptable a móvil, navegación por secciones y CTA de muestra.
 - 12 imágenes conceptuales en `assets/` para el hero (4 escenas), portafolio (4) y servicios (4). No corresponden a obras de ADCOM.
 - Escenas del hero con controles para avanzar y retroceder; cada visual conserva una leyenda de imagen conceptual.
