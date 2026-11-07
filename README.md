@@ -6,7 +6,8 @@ Propuesta HTML estática para revisar. No está publicada en Vercel, no está co
 ## Qué incluye
 - Inicio, servicios, portafolio y una plantilla de detalle de proyecto.
 - Diseño adaptable a móvil, navegación por secciones y CTA de muestra.
-- Imágenes conceptuales generadas para esta propuesta. No corresponden a obras de ADCOM.
+- 12 imágenes conceptuales en `assets/` para el hero (4 escenas), portafolio (4) y servicios (4). No corresponden a obras de ADCOM.
+- Escenas del hero con controles para avanzar y retroceder; cada visual conserva una leyenda de imagen conceptual.
 - Campos de portafolio vacíos y rotulados para sustituir por información autorizada.
 
 ## Datos de marca usados
