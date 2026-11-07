@@ -3,205 +3,139 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f7f6f1">
+<meta name="theme-color" content="#1f3329">
 <meta name="description" content="Propuesta visual de sitio web para ADCOM Mérida. Arquitectura, diseño, construcción y mantenimiento.">
 <title>ADCOM Mérida — No lo sueñes, constrúyelo</title>
-<style>
-:root{--paper:#f7f6f1;--stone:#ece9e1;--ink:#202321;--muted:#6b706a;--olive:#38483b;--olive2:#4a5d4e;--line:#d8d5cc;--white:#fffefb;--serif:Georgia,"Times New Roman",serif;--sans:Inter,"Aptos",Arial,sans-serif;--mono:"Courier New",monospace}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55}
-a{color:inherit}
-button{font:inherit}
-img{display:block;width:100%;height:100%;object-fit:cover}
-.wrap{width:min(1320px,calc(100% - 64px));margin:auto}
-.proposal-bar{background:var(--olive);color:#f6f4ed;padding:9px 24px;text-align:center;font:10px var(--mono);letter-spacing:.12em;text-transform:uppercase}
-header{position:sticky;top:0;z-index:20;background:rgba(247,246,241,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.head{height:76px;display:flex;align-items:center;justify-content:space-between;gap:25px}
-.brand{display:flex;align-items:center;gap:14px;text-decoration:none;min-width:190px}
-.wordmark{font-size:21px;font-weight:800;letter-spacing:.24em}
-.brand small{display:block;border-left:1px solid var(--line);padding-left:13px;color:var(--muted);font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;line-height:1.5}
-nav{display:flex;gap:28px;align-items:center}
-nav a{text-decoration:none;font:10px var(--mono);letter-spacing:.09em;text-transform:uppercase;color:#454a45}
-nav a:hover,nav a:focus{color:var(--olive2);text-decoration:underline;text-underline-offset:6px}
-.cta{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:14px 19px;background:var(--olive);color:white;text-decoration:none;font:10px var(--mono);letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--olive);transition:.2s}
-.cta:hover{background:#29372c;transform:translateY(-1px)}
-.cta.light{background:transparent;color:var(--ink);border-color:var(--line)}
-.cta.light:hover{background:var(--stone)}
-.menu{display:none;background:none;border:1px solid var(--line);padding:10px}
-.hero{padding:54px 0 56px}
-.hero-grid{display:grid;grid-template-columns:.84fr 1.16fr;gap:46px;align-items:center}
-.kicker,.eyebrow{font:10px var(--mono);letter-spacing:.15em;text-transform:uppercase;color:var(--olive2)}
-.kicker{display:flex;align-items:center;gap:11px}
-.kicker:before{content:"";width:30px;height:1px;background:var(--olive2)}
-h1,h2,h3,p{margin-top:0}
-h1{font:clamp(48px,6.5vw,88px)/.98 var(--serif);font-weight:400;letter-spacing:-.045em;margin:25px 0}
-.lead{font-size:17px;line-height:1.7;color:#4b504b;max-width:480px}
-.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:28px}
-.hero-note{margin-top:38px;padding-top:14px;border-top:1px solid var(--line);font:10px var(--mono);letter-spacing:.04em;color:var(--muted)}
-.hero-image{height:min(620px,51vw);min-height:400px;position:relative;background:var(--stone);overflow:hidden}
-.hero-image img{position:absolute;inset:0}
-.img-label{position:absolute;bottom:16px;left:16px;padding:9px 11px;background:rgba(247,246,241,.92);font:9px var(--mono);letter-spacing:.08em;text-transform:uppercase}
-.image-index{position:absolute;right:16px;top:16px;color:#fff;font:10px var(--mono);text-shadow:0 1px 6px #000}
-.services{border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);padding:19px 0}
-.service{padding:4px 24px;border-left:1px solid var(--line);font:11px var(--mono);letter-spacing:.1em;text-transform:uppercase}
-.service:first-child{border:0;padding-left:0}
-.section{padding:100px 0}
-.section-head{display:grid;grid-template-columns:1fr .65fr;gap:40px;align-items:end;margin-bottom:42px}
-h2{font:clamp(38px,5vw,66px)/1.03 var(--serif);font-weight:400;letter-spacing:-.035em;margin:14px 0 0}
-.section-intro{color:var(--muted);max-width:410px;margin:0 0 4px}
-.manifesto{background:var(--olive);color:#f7f6f1;padding:72px 8%;display:grid;grid-template-columns:.35fr 1fr;gap:28px;align-items:start}
-.manifesto .eyebrow{color:#d0d8ce}
-.manifesto blockquote{font:clamp(30px,4vw,54px)/1.16 var(--serif);margin:0;max-width:900px}
-.manifesto p{grid-column:2;color:#d9ddd7;max-width:600px;margin:14px 0 0}
-.project-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:22px}
-.project-card{border:1px solid var(--line);background:var(--white)}
-.project-card:nth-child(2){margin-top:84px}
-.project-card:nth-child(3){grid-column:1/3;display:grid;grid-template-columns:1.25fr .75fr;margin-top:12px}
-.project-photo{height:390px;position:relative;background:var(--stone)}
-.project-card:nth-child(2) .project-photo{height:310px}
-.project-card:nth-child(3) .project-photo{height:360px}
-.project-info{padding:22px 24px 25px}
-.project-card:nth-child(3) .project-info{align-self:center;padding:40px}
-.tag{display:inline-block;color:var(--olive2);font:9px var(--mono);letter-spacing:.1em;text-transform:uppercase}
-.project-info h3{font:28px/1.1 var(--serif);font-weight:400;margin:13px 0}
-.project-info p{font-size:13px;color:var(--muted);margin-bottom:16px}
-.text-link{display:inline-flex;gap:12px;align-items:center;text-decoration:none;border-bottom:1px solid var(--olive2);padding-bottom:4px;font:10px var(--mono);letter-spacing:.08em;text-transform:uppercase}
-.text-link:hover{color:var(--olive2)}
-.process{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.step{padding:26px 25px 30px;border-left:1px solid var(--line)}
-.step:first-child{border:0;padding-left:0}
-.step-no{font:10px var(--mono);color:var(--olive2)}
-.step h3{font:26px var(--serif);font-weight:400;margin:16px 0 8px}
-.step p{color:var(--muted);font-size:13px;margin:0}
-.detail{background:var(--stone);padding:0}
-.detail-image{height:clamp(340px,52vw,680px);position:relative}
-.detail-image:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.47))}
-.detail-title{position:absolute;z-index:1;left:7%;bottom:36px;color:white}
-.detail-title .eyebrow{color:#f0ede3}
-.detail-title h2{font-size:clamp(42px,6vw,76px);max-width:800px}
-.detail-content{padding:60px 0 74px}
-.detail-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:70px}
-.detail-fields{display:grid;grid-template-columns:1fr 1fr;gap:0 24px;border-top:1px solid #c8c5bc}
-.field{padding:16px 0;border-bottom:1px solid #c8c5bc}
-.field span{display:block;color:var(--muted);font:9px var(--mono);letter-spacing:.1em;text-transform:uppercase;margin-bottom:7px}
-.field strong{font:14px var(--sans);font-weight:500}
-.sample-note{background:#e2dfd6;padding:12px 14px;color:#555a54;font-size:11px;margin-top:22px}
-.final-cta{background:#e2dfd6;padding:74px 0}
-.final-row{display:flex;align-items:center;justify-content:space-between;gap:28px}
-.final-row h2{max-width:760px}
-.contact-note{font:10px var(--mono);letter-spacing:.04em;color:var(--muted);margin-top:15px}
-footer{padding:28px 0 38px}
-.foot-row{display:flex;justify-content:space-between;gap:24px;align-items:center;border-top:1px solid var(--line);padding-top:20px}
-.foot-row p{font-size:11px;color:var(--muted);margin:0}
-.foot-brand{font-weight:800;letter-spacing:.22em}
-@media(max-width:900px){.wrap{width:min(100% - 40px,720px)}nav{gap:14px}nav a{font-size:9px}.hero-grid{grid-template-columns:1fr;gap:30px}.hero-image{height:58vw;min-height:340px}.section{padding:76px 0}.project-grid{grid-template-columns:1fr 1fr}.project-card:nth-child(2){margin-top:50px}.project-card:nth-child(3){grid-column:1/3}.detail-grid{gap:34px}}
-@media(max-width:640px){.wrap{width:calc(100% - 36px)}.proposal-bar{font-size:8px;padding:8px}.head{height:66px}.brand{min-width:0}.brand small{display:none}.menu{display:block}.head>.cta{display:none}nav{display:none;position:absolute;top:66px;left:0;right:0;padding:18px;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}nav.open{display:flex}.hero{padding:38px 0 42px}.hero-grid{gap:26px}h1{font-size:clamp(49px,14vw,68px);margin:19px 0}.lead{font-size:15px}.hero-image{height:95vw;min-height:300px}.services{grid-template-columns:1fr 1fr;gap:0;padding:10px 0}.service{padding:12px 10px;border-left:1px solid var(--line);font-size:9px}.service:nth-child(odd){border-left:0;padding-left:0}.service:nth-child(n+3){border-top:1px solid var(--line)}.section{padding:64px 0}.section-head{grid-template-columns:1fr;gap:18px;margin-bottom:28px}.section-head h2{font-size:44px}.manifesto{grid-template-columns:1fr;padding:38px 26px;gap:18px}.manifesto p{grid-column:1}.manifesto blockquote{font-size:34px}.project-grid{grid-template-columns:1fr;gap:18px}.project-card:nth-child(2){margin-top:0}.project-card:nth-child(3){grid-column:auto;display:block;margin-top:0}.project-photo,.project-card:nth-child(2) .project-photo,.project-card:nth-child(3) .project-photo{height:68vw;min-height:250px}.project-card:nth-child(3) .project-info{padding:22px 24px}.process{grid-template-columns:1fr}.step,.step:first-child{padding:22px 0;border-left:0;border-top:1px solid var(--line)}.step:first-child{border-top:0}.detail-image{height:105vw;min-height:350px}.detail-title{left:22px;right:20px;bottom:22px}.detail-title h2{font-size:46px}.detail-content{padding:38px 0 48px}.detail-grid{grid-template-columns:1fr;gap:26px}.final-row{display:block}.final-row .cta{margin-top:23px}.foot-row{align-items:flex-start;flex-direction:column}.actions .cta{flex:1}}
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/extra.css">
+<link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/scenes.css">
 </head>
 <body>
 <div class="proposal-bar">Propuesta visual · Imágenes conceptuales · Contenido de muestra</div>
-<header>
+
+<header id="top">
   <div class="wrap head">
-    <a class="brand" href="#inicio" aria-label="ADCOM Mérida, inicio"><span class="wordmark">ADCOM</span><small>Mérida<br>Arquitectura</small></a>
+    <a class="brand" href="index.html" aria-label="ADCOM Mérida, inicio"><span class="wordmark">ADCOM</span><small>Mérida<br>Arquitectura</small></a>
     <button class="menu" id="menuBtn" aria-expanded="false" aria-controls="mainNav">Menú</button>
     <nav id="mainNav" aria-label="Navegación principal">
-      <a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#proyectos">Proyectos</a><a href="#detalle">Detalle</a>
+      <a href="index.html" aria-current="page">Inicio</a><a href="servicios.html">Servicios</a><a href="proyectos.html">Proyectos</a><a href="proyecto.html">Detalle</a><a href="contacto.html">Contacto</a>
     </nav>
-    <a class="cta" href="#contacto">Cuéntanos tu proyecto <span aria-hidden="true">↗</span></a>
+    <a class="cta sm" href="contacto.html">Cuéntanos tu proyecto <span aria-hidden="true">↗</span></a>
   </div>
 </header>
+
 <main>
   <section class="hero" id="inicio">
-    <div class="wrap hero-grid">
-      <div>
-        <div class="kicker">ADCOM Mérida · Yucatán</div>
-        <h1>No lo sueñes,<br>constrúyelo.</h1>
-        <p class="lead">Arquitectura, diseño, construcción y mantenimiento para dar forma a espacios que nacen de una idea.</p>
-        <div class="actions"><a class="cta" href="#contacto">Cuéntanos tu proyecto <span aria-hidden="true">↗</span></a><a class="cta light" href="#proyectos">Ver proyectos <span aria-hidden="true">↓</span></a></div>
-        <div class="hero-note">UNA PROPUESTA DIGITAL PARA CONVERSAR SOBRE TU SIGUIENTE PROYECTO</div>
+    <div class="hero-bg" id="heroScenes">
+      <figure class="scene" data-label="Llegada" data-src="assets/adcom-llegada.png" style="margin:0"><img alt="Imagen conceptual de la llegada en coche a una vivienda contemporánea"></figure>
+      <figure class="scene" data-label="Fachada" data-src="assets/adcom-fachada.png" style="margin:0"><img alt="Imagen conceptual de la fachada de una vivienda al atardecer"></figure>
+      <figure class="scene active" data-label="Patio" style="margin:0"><img src="assets/adcom-hero.png" alt="Imagen conceptual de una vivienda contemporánea con patio tropical en Yucatán" fetchpriority="high"></figure>
+      <figure class="scene" data-label="Interior" data-src="assets/adcom-interior.png" style="margin:0"><img alt="Imagen conceptual de una sala interior abierta al jardín"></figure>
+      <figure class="scene" data-label="Detalle" data-src="assets/adcom-detalle.png" style="margin:0"><img alt="Imagen conceptual de un detalle de piedra y madera"></figure>
+    </div>
+    <div class="wrap hero-body">
+      <div class="eyebrow reveal">ADCOM Mérida · Yucatán</div>
+      <h1 style="--d:.1s">No lo sueñes, <em>constrúyelo.</em></h1>
+      <p class="lead reveal" style="--d:.5s">Arquitectura, diseño, construcción y mantenimiento para dar forma a espacios que nacen de una idea.</p>
+      <div class="actions reveal" style="--d:.65s">
+        <a class="cta" href="contacto.html">Cuéntanos tu proyecto <span aria-hidden="true">↗</span></a>
+        <a class="cta ghost" href="proyectos.html">Ver proyectos <span aria-hidden="true">→</span></a>
       </div>
-      <figure class="hero-image" style="margin:0">
-        <img src="assets/adcom-hero.png" alt="Imagen conceptual de una vivienda contemporánea con patio tropical en Yucatán">
-        <span class="image-index">01 / VISUALIZACIÓN</span>
-        <figcaption class="img-label">Imagen conceptual · no corresponde a una obra de ADCOM</figcaption>
-      </figure>
+    </div>
+    <ol class="scene-rail" id="sceneRail" aria-label="Escenas del encabezado"></ol>
+    <div class="hero-foot">
+      <div class="wrap">
+        <div class="hero-services" role="group" aria-label="Servicios publicados">
+          <a href="servicios.html#arquitectura"><b>01</b> Arquitectura</a>
+          <a href="servicios.html#diseno"><b>02</b> Diseño</a>
+          <a href="servicios.html#construccion"><b>03</b> Construcción</a>
+          <a href="servicios.html#mantenimiento"><b>04</b> Mantenimiento</a>
+        </div>
+        <div class="hero-caption">Imagen conceptual · no corresponde a una obra de ADCOM</div>
+      </div>
     </div>
   </section>
-  <div class="wrap services" id="servicios" aria-label="Servicios publicados">
-    <div class="service">Arquitectura</div><div class="service">Diseño</div><div class="service">Construcción</div><div class="service">Mantenimiento</div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Arquitectura <i>✦</i> Diseño <i>✦</i> Construcción <i>✦</i> Mantenimiento <i>✦</i></span>
+      <span>Arquitectura <i>✦</i> Diseño <i>✦</i> Construcción <i>✦</i> Mantenimiento <i>✦</i></span>
+      <span>Arquitectura <i>✦</i> Diseño <i>✦</i> Construcción <i>✦</i> Mantenimiento <i>✦</i></span>
+      <span>Arquitectura <i>✦</i> Diseño <i>✦</i> Construcción <i>✦</i> Mantenimiento <i>✦</i></span>
+    </div>
   </div>
-  <section class="section">
-    <div class="wrap">
-      <div class="manifesto">
-        <div class="eyebrow">01 / Enfoque</div>
-        <blockquote>Un espacio bien pensado comienza por escuchar cómo quieres vivirlo.</blockquote>
-        <p>Una presentación clara de servicios y proyectos puede ayudar a que cada persona imagine el siguiente paso y sepa cómo iniciar una conversación.</p>
+
+  <section class="section approach">
+    <div class="wrap approach-grid">
+      <div>
+        <div class="eyebrow reveal">01 / Enfoque</div>
+        <blockquote class="reveal">Un espacio bien pensado comienza por <em>escuchar</em> cómo quieres vivirlo.</blockquote>
+        <p class="reveal" style="--d:.16s">Una presentación clara de servicios y proyectos puede ayudar a que cada persona imagine el siguiente paso y sepa cómo iniciar una conversación.</p>
+      </div>
+      <div class="approach-media reveal" style="--d:.1s">
+        <div class="main px clip"><img src="assets/adcom-arcos.png" alt="Imagen conceptual de un corredor de arcos abierto a un jardín tropical" loading="lazy"></div>
+        <div class="inset"><img src="assets/adcom-cocina.png" alt="Imagen conceptual de cocina y comedor abiertos a un jardín tropical" loading="lazy"></div>
       </div>
     </div>
   </section>
-  <section class="section" id="proyectos" style="padding-top:25px">
+
+  <section class="section services">
     <div class="wrap">
       <div class="section-head">
-        <div><div class="eyebrow">02 / Portafolio · estructura propuesta</div><h2>Espacios que empiezan con una idea.</h2></div>
-        <p class="section-intro">Un catálogo visual para presentar el trabajo de ADCOM. Los campos se mantienen abiertos hasta integrar proyectos e información autorizados.</p>
+        <div><div class="eyebrow reveal">02 / Servicios</div><h2>Del primer trazo a <em>la obra</em> terminada.</h2></div>
+        <p class="section-intro reveal" style="--d:.16s">Los cuatro servicios publicados por ADCOM, presentados como puntos de entrada claros.</p>
+      </div>
+      <div class="service-grid" aria-label="Servicios publicados">
+        <a class="service reveal" href="servicios.html#arquitectura"><span class="arrow" aria-hidden="true">↗</span><span class="no">01</span><h3>Arquitectura</h3></a>
+        <a class="service reveal" style="--d:.08s" href="servicios.html#diseno"><span class="arrow" aria-hidden="true">↗</span><span class="no">02</span><h3>Diseño</h3></a>
+        <a class="service reveal" style="--d:.16s" href="servicios.html#construccion"><span class="arrow" aria-hidden="true">↗</span><span class="no">03</span><h3>Construcción</h3></a>
+        <a class="service reveal" style="--d:.24s" href="servicios.html#mantenimiento"><span class="arrow" aria-hidden="true">↗</span><span class="no">04</span><h3>Mantenimiento</h3></a>
+      </div>
+      <div class="more reveal"><a class="link-line" href="servicios.html">Ver todos los servicios <span aria-hidden="true">→</span></a></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow reveal">03 / Portafolio · estructura propuesta</div><h2>Espacios que empiezan con <em>una idea.</em></h2></div>
+        <p class="section-intro reveal" style="--d:.16s">Un catálogo visual para presentar el trabajo de ADCOM. Los campos se mantienen abiertos hasta integrar proyectos e información autorizados.</p>
       </div>
       <div class="project-grid">
-        <article class="project-card">
-          <div class="project-photo"><img src="assets/adcom-gallery-1.png" alt="Imagen conceptual de un espacio interior abierto a un patio"></div>
-          <div class="project-info"><span class="tag">Proyecto de muestra · sustituir</span><h3>[Nombre del proyecto]</h3><p>[Tipo de servicio] · [Ubicación]</p><a class="text-link" href="#detalle">Ver estructura de detalle <span aria-hidden="true">↗</span></a></div>
+        <article class="project-card reveal">
+          <div class="project-photo px clip"><img src="assets/adcom-cocina.png" alt="Imagen conceptual de cocina y comedor abiertos a un jardín tropical" loading="lazy"></div>
+          <div class="project-info"><div><span class="tag">Proyecto de muestra · sustituir</span><h3>[Nombre del proyecto]</h3><p>[Tipo de servicio] · [Ubicación]</p></div><a class="round-link" href="proyecto.html" aria-label="Ver detalle del proyecto 1">↗</a></div>
         </article>
-        <article class="project-card">
-          <div class="project-photo"><img src="assets/adcom-gallery-2.png" alt="Imagen conceptual de un detalle arquitectónico de piedra y madera"></div>
-          <div class="project-info"><span class="tag">Proyecto de muestra · sustituir</span><h3>[Nombre del proyecto]</h3><p>[Tipo de servicio] · [Ubicación]</p><a class="text-link" href="#detalle">Ver estructura de detalle <span aria-hidden="true">↗</span></a></div>
+        <article class="project-card reveal" style="--d:.12s">
+          <div class="project-photo px clip"><img src="assets/adcom-recamara.png" alt="Imagen conceptual de recámara serena con cabecera de madera" loading="lazy"></div>
+          <div class="project-info"><div><span class="tag">Proyecto de muestra · sustituir</span><h3>[Nombre del proyecto]</h3><p>[Tipo de servicio] · [Ubicación]</p></div><a class="round-link" href="proyecto.html" aria-label="Ver detalle del proyecto 2">↗</a></div>
         </article>
-        <article class="project-card">
-          <div class="project-photo"><img src="assets/adcom-hero.png" alt="Imagen conceptual de patio residencial tropical"></div>
-          <div class="project-info"><span class="tag">Proyecto de muestra · sustituir</span><h3>[Nombre del proyecto]</h3><p>[Tipo de servicio] · [Ubicación]</p><a class="text-link" href="#detalle">Ver estructura de detalle <span aria-hidden="true">↗</span></a></div>
+        <article class="project-card reveal">
+          <div class="project-photo px clip"><img src="assets/adcom-terraza-noche.png" alt="Imagen conceptual de terraza y piscina iluminadas de noche" loading="lazy"></div>
+          <div class="project-info"><div><span class="tag">Proyecto de muestra · sustituir</span><h3>[Nombre del proyecto]</h3><p>[Tipo de servicio] · [Ubicación]</p></div><a class="round-link" href="proyecto.html" aria-label="Ver detalle del proyecto 3">↗</a></div>
         </article>
       </div>
+      <div class="more reveal"><a class="link-line" href="proyectos.html">Ver todos los proyectos <span aria-hidden="true">→</span></a></div>
     </div>
   </section>
-  <section class="section" style="padding-top:20px">
-    <div class="wrap">
-      <div class="section-head"><div><div class="eyebrow">03 / Recorrido sugerido</div><h2>De la idea al espacio.</h2></div><p class="section-intro">Flujo de contenido propuesto para explicar el servicio. Ajustar a la forma real de trabajo de ADCOM.</p></div>
-      <div class="process">
-        <article class="step"><div class="step-no">01 — CONVERSAR</div><h3>Cuéntanos tu idea</h3><p>Un primer espacio para conocer lo que buscas y resolver dudas.</p></article>
-        <article class="step"><div class="step-no">02 — PROYECTAR</div><h3>Dar forma al proyecto</h3><p>Presentar el alcance y los siguientes pasos acordados con cada cliente.</p></article>
-        <article class="step"><div class="step-no">03 — ACOMPAÑAR</div><h3>Avanzar con claridad</h3><p>Comunicar el proceso y mantener la conversación durante el desarrollo.</p></article>
-      </div>
-    </div>
-  </section>
-  <section class="detail" id="detalle">
-    <div class="detail-image">
-      <img src="assets/adcom-hero.png" alt="Imagen conceptual para ilustrar el encabezado de un proyecto de arquitectura">
-      <div class="detail-title"><div class="eyebrow">Plantilla de detalle · contenido de muestra</div><h2>[Nombre del proyecto]</h2></div>
-    </div>
-    <div class="wrap detail-content">
-      <div class="detail-grid">
-        <div><div class="eyebrow">Ficha de proyecto</div><p style="margin-top:18px;color:var(--muted)">Una página dedicada para contar el contexto, el alcance confirmado y los espacios del proyecto, con imágenes autorizadas.</p><div class="sample-note">Contenido de muestra — sustituir por información autorizada de ADCOM.</div></div>
-        <div class="detail-fields">
-          <div class="field"><span>Tipo de servicio</span><strong>[Arquitectura / Diseño / Construcción / Mantenimiento]</strong></div>
-          <div class="field"><span>Ubicación</span><strong>[Ubicación]</strong></div>
-          <div class="field"><span>Año / período</span><strong>[Año]</strong></div>
-          <div class="field"><span>Galería</span><strong>[Añadir imágenes autorizadas]</strong></div>
-          <div class="field" style="grid-column:1/-1"><span>Descripción</span><strong>[Descripción del proyecto y alcance confirmado]</strong></div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="final-cta" id="contacto">
+
+
+  <section class="final-cta on-dark" id="contacto">
+    <div class="bg"><img src="assets/adcom-aerea.png" alt="" loading="lazy"></div>
     <div class="wrap final-row">
-      <div><div class="eyebrow">ADCOM Mérida · Yucatán</div><h2>¿Tienes terreno o una idea? Hablemos.</h2><p class="contact-note">Canal de contacto por confirmar antes de publicar.</p></div>
-      <a class="cta" href="#inicio">Cuéntanos tu proyecto <span aria-hidden="true">↗</span></a>
+      <div><div class="eyebrow reveal">ADCOM Mérida · Yucatán</div><h2>¿Tienes terreno o una idea? <em>Hablemos.</em></h2><p class="contact-note reveal" style="--d:.16s">Canal de contacto por confirmar antes de publicar.</p></div>
+      <a class="cta reveal" style="--d:.2s" href="contacto.html">Cuéntanos tu proyecto <span aria-hidden="true">↗</span></a>
     </div>
   </section>
 </main>
+
 <footer><div class="wrap foot-row"><div class="foot-brand">ADCOM</div><p>Propuesta visual · Mérida, Yucatán</p><p>Imágenes conceptuales y campos de muestra</p></div></footer>
-<script>
-const menuBtn=document.getElementById("menuBtn"), nav=document.getElementById("mainNav");
-menuBtn.addEventListener("click",()=>{const open=nav.classList.toggle("open");menuBtn.setAttribute("aria-expanded",String(open));});
-nav.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{nav.classList.remove("open");menuBtn.setAttribute("aria-expanded","false");}));
-</script>
+<script src="js/main.js"></script>
+<script src="js/pages.js"></script>
+<script src="js/scenes.js"></script>
 </body>
 </html>
